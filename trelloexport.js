@@ -21,7 +21,7 @@ var $,
 // Variables
 var $excel_btn,
     addInterval,
-    columnHeadings = ['List', 'Title', 'Description', 'Points', 'Due', 'Members', 'Labels', 'Card #'];
+    columnHeadings = ['Versao','Situacao', 'Title', 'Description', 'Points', 'Due', 'Members', 'Card #', 'Time'];
 
 window.URL = window.webkitURL || window.URL;
 
@@ -125,8 +125,8 @@ function createExcelExport() {
                         points,
                         due,
                         memberInitials.toString(),
-                        labels.toString(),
-                        card.idShort
+                        card.idShort,
+						time
                     ];
                 
                     // Writes all closed items to the Archived tab
